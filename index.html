@@ -62,7 +62,8 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
   <meta name="citation_author" content="de Melo, Gerard">
   <meta name="citation_publication_date" content="2026">
   <meta name="citation_conference_title" content="WACV">
-  <meta name="citation_pdf_url" content="https://gorilla-watch.github.io/static/pdfs/paper.pdf">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2512.07776.pdf">
+  <meta name="citation_arxiv_id" content="2512.07776">
   
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
@@ -81,8 +82,8 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
   <title>GorillaWatch: An Automated System for In-the-Wild Gorilla Re-Identification and Population Monitoring - Schall et al. | WACV 2026</title>
   
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/png" href="static/images/favicon.png">
+  <link rel="apple-touch-icon" href="static/images/favicon.png">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -190,7 +191,7 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
     "@type": "Organization",
     "name": "Hasso Plattner Institute",
     "url": "https://hpi.de",
-    "logo": "https://gorilla-watch.github.io/static/images/favicon.ico",
+    "logo": "https://gorilla-watch.github.io/static/images/favicon.png",
     "sameAs": [
       "https://github.com/gorilla-watch"
     ]
@@ -208,15 +209,15 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
 
   <main id="main-content">
   <section class="hero">
-    <div class="hero-body">
+    <div class="hero-body" style="background: url('static/images/banner.png'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; padding: 4rem 1.5rem;">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
-          <div class="column has-text-centered">
+          <div class="column is-full has-text-centered" style="background: rgba(0, 0, 0, 0.6); padding: 1.5rem 2rem 1.5rem; border-radius: 15px; backdrop-filter: blur(5px); margin-top: 6rem;">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">GorillaWatch: An Automated System for In-the-Wild Gorilla Re-Identification and Population Monitoring</h1>
-            <div class="is-size-5 publication-authors">
+            <h1 class="title is-2 publication-title" style="color: white !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); margin-bottom: 0.75rem;">GorillaWatch: An Automated System for In-the-Wild Gorilla Re-Identification and Population Monitoring</h1>
+            <div class="is-size-6 publication-authors" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.7); margin-bottom: 0.3rem;">
               <span class="author-block">
-                <a href="https://maximilianschall.me/" target="_blank">Maximilian Schall</a><sup>1</sup>,</span>
+                <a href="https://maximilianschall.me/" target="_blank" style="color: white;">Maximilian Schall</a><sup>1</sup>,</span>
               <span class="author-block">
                 Felix Leonard Knöfel<sup>1</sup>,</span>
               <span class="author-block">
@@ -246,15 +247,86 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
               </span>
             </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup><a href="https://hpi.de" target="_blank">Hasso Plattner Institute, Germany</a></span>
-                    <span class="author-block"><sup>2</sup><a href="https://conservationxlabs.com" target="_blank">Conservation X Labs</a></span>
-                    <span class="author-block"><sup>3</sup><a href="https://sabineplattnerafricancharities.com" target="_blank">Sabine Plattner African Charities</a></span>
-                    <span class="author-block"><br>WACV 2026</span>
+                  <div class="is-size-6 publication-authors" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.7); margin-bottom: 0.3rem;">
+                    <span class="author-block"><sup>1</sup><a href="https://hpi.de" target="_blank" style="color: white;">Hasso Plattner Institute, Germany</a></span>
+                    <span class="author-block"><sup>2</sup><a href="https://conservationxlabs.com" target="_blank" style="color: white;">Conservation X Labs</a></span>
+                    <span class="author-block"><sup>3</sup><a href="https://www.spacafrica.org/" target="_blank" style="color: white;">Sabine Plattner African Charities</a></span>
+                  </div>
+                  <div class="is-size-6 publication-authors" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.7); margin-bottom: 0.3rem;">
+                    <span class="author-block">Winter Conference on Applications of Computer Vision 2026</span>
                   </div>
 
-                  <div class="column has-text-centered">
+                  <div class="column has-text-centered" style="padding-top: 0.5rem;">
                     <div class="publication-links">
+                      <!-- Code -->
+                      <span class="link-block">
+                        <a href="https://github.com/gorilla-watch/gorillawatch" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                      </a>
+                    </span>
+
+                    <!-- Datasets -->
+                    <span class="link-block">
+                      <a href="https://huggingface.co/datasets/gorilla-watch/Gorilla-SPAC-Wild" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-database"></i>
+                      </span>
+                      <span>SPAC-Wild Dataset</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/gorilla-watch/Gorilla-Zoo-Berlin" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Zoo-Berlin Dataset</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/gorilla-watch/Gorilla-SPAC-MoT" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>SPAC-MoT Dataset</span>
+                </a>
+              </span>
+
+              <!-- arXiv -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2512.07776" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+
+              <!-- Poster -->
+              <span class="link-block">
+                <a href="static/pdfs/poster.pdf" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Poster</span>
+              </a>
+            </span>
+
+            </div>
+          </div>
+
+                  <!-- <div class="column has-text-centered"> -->
+                    <!-- <div class="publication-links"> -->
                          <!-- TODO: Update with your arXiv paper ID -->
                       <!-- <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
@@ -267,7 +339,7 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
                     </span> -->
 
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -275,10 +347,10 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -286,10 +358,10 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
                     </span>
                     <span>Code</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -297,7 +369,7 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
             </div>
           </div>
         </div>
@@ -306,80 +378,230 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<!-- TODO: Uncomment when video content is ready
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
-      </h2>
-    </div>
-  </div>
-</section>
--->
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
-<!-- TODO: Uncomment when abstract is ready
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+          <p style="font-size: 0.95rem; line-height: 1.5;">
+            Monitoring critically endangered western lowland gorillas is currently hampered by the immense manual effort required to re-identify individuals from vast archives of camera trap footage. The primary obstacle to automating this process has been the lack of large-scale, "in-the-wild" video datasets suitable for training robust deep learning models. To address this gap, we introduce a comprehensive benchmark with three novel datasets: Gorilla-SPAC-Wild, the largest video dataset for wild primate re-identification to date; Gorilla-Berlin-Zoo, for assessing cross-domain re-identification generalization; and Gorilla-SPAC-MoT, for evaluating multi-object tracking in camera trap footage. Building on these datasets, we present GorillaWatch, an end-to-end pipeline integrating detection, tracking, and re-identification. To exploit temporal information, we introduce a multi-frame self-supervised pretraining strategy that leverages consistency in tracklets to learn domain-specific features without manual labels. To ensure scientific validity, a differentiable adaptation of AttnLRP verifies that our model relies on discriminative biometric traits rather than background correlations. Extensive benchmarking subsequently demonstrates that aggregating features from large-scale image backbones outperforms specialized video architectures. Finally, we address unsupervised population counting by integrating spatiotemporal constraints into standard clustering to mitigate over-segmentation. We publicly release all code and datasets to facilitate scalable, non-invasive monitoring of endangered species
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
--->
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<!-- TODO: Uncomment when images are ready
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<!-- Key Contributions -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">Key Contributions</h2>
+        <div class="content">
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <div class="box">
+                <h3 class="title is-5">① Novel Benchmark Datasets</h3>
+                <p>We introduce three novel datasets for open-set primate re-identification and tracking, enabling systematic evaluation of gorilla monitoring systems.</p>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="box">
+                <h3 class="title is-5">② Multi-Frame Self-Supervised Learning</h3>
+                <p>We propose a multi-frame self-supervised pretraining strategy which leverages temporal consistency in tracklets without manual labels.</p>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="box">
+                <h3 class="title is-5">③ Ensemble Superiority</h3>
+                <p>We demonstrate that aggregating features from large-scale image backbones outperforms specialized video architectures for gorilla re-identification.</p>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="box">
+                <h3 class="title is-5">④ Spatiotemporal Constrained Clustering</h3>
+                <p>We address unsupervised population counting via spatiotemporal constrained clustering, reducing over-segmentation in real-world scenarios.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="item">
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
--->
-<!-- End image carousel -->
+<!-- End Key Contributions -->
+
+<!-- Pipeline -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Pipeline Overview</h2>
+        <div class="content has-text-left">
+          <p class="has-text-centered">
+            Our end-to-end GorillaWatch pipeline consists of four main stages:
+          </p>
+          <ol class="is-size-5">
+            <li><strong>Detection:</strong> Automated gorilla detection in camera trap footage</li>
+            <li><strong>Tracking:</strong> Multi-object tracking to maintain individual identities across frames</li>
+            <li><strong>re-ID Model:</strong> Deep learning-based feature extraction for individual recognition</li>
+            <li><strong>Constrained Clustering:</strong> Spatiotemporal clustering for population counting and identity prediction</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Pipeline -->
+
+<!-- Results -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">Key Results</h2>
+        <div class="content">
+          <h3 class="title is-4 has-text-centered">Spatiotemporal Constrained vs. Unconstrained Clustering</h3>
+          <div class="table-container">
+            <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>ARI ↑</th>
+                  <th>AMI ↑</th>
+                  <th># Clusters</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4" class="has-text-weight-bold has-background-light">Unconstrained</td>
+                </tr>
+                <tr>
+                  <td>HAC</td>
+                  <td>0.606</td>
+                  <td>0.728</td>
+                  <td>465</td>
+                </tr>
+                <tr>
+                  <td>DBSCAN</td>
+                  <td>0.379</td>
+                  <td>0.625</td>
+                  <td>341</td>
+                </tr>
+                <tr>
+                  <td>HDBSCAN</td>
+                  <td>0.114</td>
+                  <td>0.510</td>
+                  <td>113</td>
+                </tr>
+                <tr>
+                  <td colspan="4" class="has-text-weight-bold has-background-light">Constrained (Spatiotemporal)</td>
+                </tr>
+                <tr class="has-background-success-light">
+                  <td><strong>HAC</strong></td>
+                  <td><strong>0.837</strong></td>
+                  <td><strong>0.891</strong></td>
+                  <td><strong>17 ✓</strong></td>
+                </tr>
+                <tr>
+                  <td>DBSCAN</td>
+                  <td>0.586</td>
+                  <td>0.873</td>
+                  <td>13</td>
+                </tr>
+                <tr>
+                  <td>HDBSCAN</td>
+                  <td>0.184</td>
+                  <td>0.677</td>
+                  <td>204</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="has-text-centered">
+            <em>Spatiotemporal constrained clustering significantly improves accuracy and reduces over-segmentation, with HAC achieving the best performance.</em>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Results -->
+
+<!-- Additional Analyses -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">Comprehensive Analyses</h2>
+        <div class="content">
+          <div class="box">
+            <h3 class="title is-5">🔍 Tracker Comparison</h3>
+            <p>Detailed comparison of state-of-the-art multi-object tracking methods evaluated on our Gorilla-SPAC-Multi-Object-Tracking dataset.</p>
+          </div>
+          <div class="box">
+            <h3 class="title is-5">🧠 Backbone Zero-Shot Benchmark</h3>
+            <p>Systematic comparison of pre-trained embedding models, demonstrating that ensemble methods outperform specialized video models for gorilla re-identification.</p>
+          </div>
+          <div class="box">
+            <h3 class="title is-5">📊 DINOv2 Scaling Analysis</h3>
+            <p>Accuracy vs. model size analysis (Small → Giant) after fine-tuning, showing performance improvements across model scales.</p>
+          </div>
+          <div class="box">
+            <h3 class="title is-5">🎬 Video Architecture Deep-Dive</h3>
+            <p>Full results including the effect of replacing standard Vision Transformers with DINOv2 backbones in video architectures.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Additional Analyses -->
+
+<!-- Visual Overview -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Visual Overview</h2>
+    <div class="columns is-multiline">
+      <div class="column is-full">
+        <div class="box has-text-centered">
+          <figure class="image">
+            <img src="static/images/pipeline_diagram.png" alt="GorillaWatch pipeline architecture" loading="lazy"/>
+          </figure>
+          <p class="subtitle is-6 mt-3">
+            <strong>Pipeline Architecture:</strong> End-to-end workflow from Detection → Tracking → re-ID Model → Clustering for ID Prediction.
+          </p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box has-text-centered">
+          <figure class="image">
+            <img src="static/images/dataset_statistics.png" alt="Dataset statistics and composition" loading="lazy"/>
+          </figure>
+          <p class="subtitle is-6 mt-3">
+            <strong>Dataset Scale:</strong> 110K+ frames from wild camera traps and zoo videos across multiple locations.
+          </p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box has-text-centered">
+          <figure class="image">
+            <img src="static/images/ensemble_comparison.png" alt="Ensemble methods vs video models comparison" loading="lazy"/>
+          </figure>
+          <p class="subtitle is-6 mt-3">
+            <strong>Key Finding:</strong> Ensemble methods (84.8% accuracy) significantly outperform individual video models.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Visual Overview -->
 
 
 
@@ -404,52 +626,13 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
 <!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<!-- TODO: Uncomment when video carousel content is ready
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
--->
-<!-- End video carousel -->
 
 
 
 
 
 
-<!-- Paper poster -->
-<!-- TODO: Uncomment when poster is ready
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-      </div>
-    </div>
-  </section>
--->
+<!-- Paper poster removed - available as download link above -->
 <!--End paper poster -->
 
 
