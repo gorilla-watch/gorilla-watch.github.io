@@ -206,6 +206,17 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
     <i class="fas fa-chevron-up"></i>
   </button>
 
+  <!-- Full-size image viewer (opened by clicking dataset figures) -->
+  <div class="image-viewer" id="imageViewer" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+    <button class="image-viewer-close" type="button" title="Close" aria-label="Close image viewer">
+      <i class="fas fa-times"></i>
+    </button>
+    <figure class="image-viewer-content">
+      <img id="imageViewerImage" alt=""/>
+      <figcaption class="image-viewer-caption" id="imageViewerCaption"></figcaption>
+    </figure>
+  </div>
+
 
   <main id="main-content">
   <section class="hero">
@@ -217,33 +228,33 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
             <h1 class="title is-2 publication-title" style="color: white !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); margin-bottom: 0.75rem;">GorillaWatch: An Automated System for In-the-Wild Gorilla Re-Identification and Population Monitoring</h1>
             <div class="is-size-6 publication-authors" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.7); margin-bottom: 0.3rem;">
               <span class="author-block">
-                <a href="https://maximilianschall.me/" target="_blank" style="color: white;">Maximilian Schall</a><sup>1</sup>,</span>
+                <a href="https://maximilianschall.me/" target="_blank" style="color: white !important;">Maximilian Schall</a><sup>1</sup>,</span>
               <span class="author-block">
-                Felix Leonard Knöfel<sup>1</sup>,</span>
+                <a href="https://www.linkedin.com/in/felix-knoefel/" target="_blank" style="color: white !important;">Felix Leonard Knöfel</a><sup>1</sup>,</span>
               <span class="author-block">
-                Noah Elias König<sup>1</sup>,</span>
+                <a href="https://www.linkedin.com/in/noah-elias-koenig/" target="_blank" style="color: white !important;">Noah Elias König</a><sup>1</sup>,</span>
               <span class="author-block">
-                Jan Jonas Kubeler<sup>1</sup>,</span>
+                <a href="https://www.linkedin.com/in/jonas-kubeler/" target="_blank" style="color: white !important;">Jan Jonas Kubeler</a><sup>1</sup>,</span>
               <span class="author-block">
-                Maximilian von Klinski<sup>1</sup>,</span>
+                <a href="https://www.linkedin.com/in/maxvonklinski/" target="_blank" style="color: white !important;">Maximilian von Klinski</a><sup>1</sup>,</span>
               <span class="author-block">
-                Joan Wilhelm Linnemann<sup>1</sup>,</span>
+                <a href="https://www.linkedin.com/in/joan-linnemann-09a2b6383/" target="_blank" style="color: white !important;">Joan Wilhelm Linnemann</a><sup>1</sup>,</span>
               <span class="author-block">
-                Xiaoshi Liu<sup>1</sup>,</span>
+                <a href="https://www.linkedin.com/in/xiaoshi-liu-computer-science/" target="_blank" style="color: white !important;">Xiaoshi Liu</a><sup>1</sup>,</span>
               <span class="author-block">
-                Iven Jelle Schlegelmilch<sup>1</sup>,</span>
+                <a href="https://www.linkedin.com/in/iven-schlegelmilch-576b4b249/" target="_blank" style="color: white !important;">Iven Jelle Schlegelmilch</a><sup>1</sup>,</span>
               <span class="author-block">
-                Ole Woyciniuk<sup>1</sup>,</span>
+                <a href="https://www.linkedin.com/in/ole-woyciniuk-270909383/" target="_blank" style="color: white !important;">Ole Woyciniuk</a><sup>1</sup>,</span>
               <span class="author-block">
-                Alexandra Kudaeva<sup>1</sup>,</span>
+                <a href="https://www.linkedin.com/in/alexandra-schild/" target="_blank" style="color: white !important;">Alexandra Kudaeva</a><sup>1</sup>,</span>
               <span class="author-block">
-                Dante Wasmuht<sup>2</sup>,</span>
+                <a href="https://www.linkedin.com/in/dante-wasmuht-80336b208/" target="_blank" style="color: white !important;">Dante Wasmuht</a><sup>2</sup>,</span>
               <span class="author-block">
                 Magdalena Bermejo Espinet<sup>3</sup>,</span>
               <span class="author-block">
                 German Illera Basas<sup>3</sup>,</span>
               <span class="author-block">
-                Gerard de Melo<sup>1</sup>
+                <a href="http://gerard.demelo.org/" target="_blank" style="color: white !important;">Gerard de Melo</a><sup>1</sup>
               </span>
             </div>
 
@@ -386,9 +397,16 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p style="font-size: 0.95rem; line-height: 1.5;">
-            Monitoring critically endangered western lowland gorillas is currently hampered by the immense manual effort required to re-identify individuals from vast archives of camera trap footage. The primary obstacle to automating this process has been the lack of large-scale, "in-the-wild" video datasets suitable for training robust deep learning models. To address this gap, we introduce a comprehensive benchmark with three novel datasets: Gorilla-SPAC-Wild, the largest video dataset for wild primate re-identification to date; Gorilla-Berlin-Zoo, for assessing cross-domain re-identification generalization; and Gorilla-SPAC-MoT, for evaluating multi-object tracking in camera trap footage. Building on these datasets, we present GorillaWatch, an end-to-end pipeline integrating detection, tracking, and re-identification. To exploit temporal information, we introduce a multi-frame self-supervised pretraining strategy that leverages consistency in tracklets to learn domain-specific features without manual labels. To ensure scientific validity, a differentiable adaptation of AttnLRP verifies that our model relies on discriminative biometric traits rather than background correlations. Extensive benchmarking subsequently demonstrates that aggregating features from large-scale image backbones outperforms specialized video architectures. Finally, we address unsupervised population counting by integrating spatiotemporal constraints into standard clustering to mitigate over-segmentation. We publicly release all code and datasets to facilitate scalable, non-invasive monitoring of endangered species
+            Monitoring critically endangered western lowland gorillas is currently hampered by the immense manual effort required to re-identify individuals from vast archives of camera trap footage. The primary obstacle to automating this process has been the lack of large-scale, "in-the-wild" video datasets suitable for training robust deep learning models. To address this gap, we introduce a comprehensive benchmark with three novel datasets: Gorilla-SPAC-Wild, the largest video dataset for wild primate re-identification to date; Gorilla-Zoo-Berlin, for assessing cross-domain re-identification generalization; and Gorilla-SPAC-MoT, for evaluating multi-object tracking in camera trap footage. Building on these datasets, we present GorillaWatch, an end-to-end pipeline integrating detection, tracking, and re-identification. To exploit temporal information, we introduce a multi-frame self-supervised pretraining strategy that leverages consistency in tracklets to learn domain-specific features without manual labels. To ensure scientific validity, a differentiable adaptation of AttnLRP verifies that our model relies on discriminative biometric traits rather than background correlations. Extensive benchmarking subsequently demonstrates that aggregating features from large-scale image backbones outperforms specialized video architectures. Finally, we address unsupervised population counting by integrating spatiotemporal constraints into standard clustering to mitigate over-segmentation. We publicly release all code and datasets to facilitate scalable, non-invasive monitoring of endangered species
           </p>
         </div>
+
+        <figure class="page-video">
+          <video controls preload="metadata" playsinline>
+            <source src="static/videos/example1.mp4" type="video/mp4">
+            Your browser does not support embedded videos.
+          </video>
+        </figure>
       </div>
     </div>
   </div>
@@ -436,8 +454,331 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
 </section>
 <!-- End Key Contributions -->
 
+<!-- Datasets -->
+<section class="section hero is-light" id="datasets">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Datasets</h2>
+    <p class="dataset-intro has-text-centered">
+      We release three datasets of western lowland gorillas (two for re-identification, one for multi-object
+      tracking) all recorded with camera traps and annotated by experts who know the respective population. The full documentations of the datasets can be found in the corresponding <a href="https://huggingface.co/gorilla-watch" target="_blank" style="text-decoration: underline;">HuggingFace repositories</a>.
+    </p>
+
+    <!-- Gorilla-SPAC-Wild -->
+    <div class="box dataset-card">
+      <h3 class="title is-4 mb-1">Gorilla-SPAC-Wild</h3>
+      <p class="dataset-subtitle">In-the-wild benchmark &middot; Odzala-Kokoua National Park, Republic of Congo</p>
+
+      <div class="dataset-stats">
+        <div class="dataset-stat"><span class="value">135</span><span class="label">Individuals</span></div>
+        <div class="dataset-stat"><span class="value">160.8K</span><span class="label">Face Crops</span></div>
+        <div class="dataset-stat"><span class="value">353.8K</span><span class="label">Body Crops</span></div>
+        <div class="dataset-stat"><span class="value">33</span><span class="label">Camera locations</span></div>
+        <div class="dataset-stat"><span class="value">4 years</span><span class="label">Recording period</span></div>
+      </div>
+
+      <p>
+        The largest video dataset for wild primate re-identification to date. Individuals were recorded across multiple
+        encounters at different locations and points in time, so appearance changes with lighting, weather and camera
+        angle. Conditions and challenges a deployed system actually faces. Ground truth was provided by primate researchers
+        with 15+ years of field experience with this population. Train, validation and test splits contain
+        <strong>disjoint individuals</strong>, making the benchmark open-set: models are always evaluated on gorillas
+        they have never seen.
+      </p>
+
+      <figure class="image dataset-figure mt-5">
+        <img src="static/images/datasets/wild_example_1.jpg" data-full="static/images/datasets/NN02_2.jpg" alt="Camera trap frame from Gorilla-SPAC-Wild with face and body bounding boxes, next to the corresponding face and body crops" loading="lazy"/>
+      </figure>
+      <p class="dataset-caption">
+        One sample across the dataset configurations: the full camera trap frame with the detected face (orange) and
+        body (blue) boxes, and the squared crops that are fed to the re-ID models.
+      </p>
+
+      <details class="dataset-more">
+        <summary>
+          <i class="fas fa-chevron-down"></i>
+          <span class="dataset-more-show">Show 5 more examples</span>
+          <span class="dataset-more-hide">Hide examples</span>
+        </summary>
+        <div class="dataset-gallery">
+          <div class="dataset-gallery-item">
+            <a href="static/images/datasets/NN02_2.jpg">
+              <figure class="image dataset-figure">
+                <img src="static/images/datasets/NN02_2.jpg" alt="Gorilla-SPAC-Wild example: individual NN02" loading="lazy"/>
+              </figure>
+            </a>
+            <p class="dataset-thumb-label">NN02 &middot; the example shown above</p>
+          </div>
+          <div class="dataset-gallery-item">
+            <a href="static/images/datasets/ES00_2.jpg">
+              <figure class="image dataset-figure">
+                <img src="static/images/datasets/ES00_2.jpg" alt="Gorilla-SPAC-Wild example: individual ES00" loading="lazy"/>
+              </figure>
+            </a>
+            <p class="dataset-thumb-label">ES00 &middot; silverback at close range</p>
+          </div>
+          <div class="dataset-gallery-item">
+            <a href="static/images/datasets/AY04_3.jpg">
+              <figure class="image dataset-figure">
+                <img src="static/images/datasets/AY04_3.jpg" alt="Gorilla-SPAC-Wild example: individual AY04" loading="lazy"/>
+              </figure>
+            </a>
+            <p class="dataset-thumb-label">AY04 &middot; several gorillas in one frame</p>
+          </div>
+          <div class="dataset-gallery-item">
+            <a href="static/images/datasets/JP60_2.jpg">
+              <figure class="image dataset-figure">
+                <img src="static/images/datasets/JP60_2.jpg" alt="Gorilla-SPAC-Wild example: individual JP60" loading="lazy"/>
+              </figure>
+            </a>
+            <p class="dataset-thumb-label">JP60 &middot; baby gorilla</p>
+          </div>
+          <div class="dataset-gallery-item">
+            <a href="static/images/datasets/US42_1.jpg">
+              <figure class="image dataset-figure">
+                <img src="static/images/datasets/US42_1.jpg" alt="Gorilla-SPAC-Wild example: individual US42" loading="lazy"/>
+              </figure>
+            </a>
+            <p class="dataset-thumb-label">US42 &middot; juvenile gorilla</p>
+          </div>
+          <div class="dataset-gallery-item">
+            <a href="static/images/datasets/RC61_2.jpg">
+              <figure class="image dataset-figure">
+                <img src="static/images/datasets/RC61_2.jpg" alt="Gorilla-SPAC-Wild example: individual RC61" loading="lazy"/>
+              </figure>
+            </a>
+            <p class="dataset-thumb-label">RC61 &middot; baby gorilla</p>
+          </div>
+        </div>
+      </details>
+
+      <div class="dataset-plots">
+        <div class="dataset-plot-item">
+          <figure class="image dataset-figure">
+            <img src="static/images/datasets/wild_splits.png" alt="Bar chart of unique individuals and samples per split" loading="lazy"/>
+          </figure>
+          <p class="dataset-caption">
+            Class-disjoint splits, plus a <em>single_encounter</em> set holding the 27 individuals that were seen only once
+            and therefore cannot be used for cross-encounter evaluation.
+          </p>
+        </div>
+
+        <div class="dataset-plot-item">
+          <figure class="image dataset-figure">
+            <img src="static/images/datasets/class_distribution_spac.png" alt="Bar Chart showing the distribution of classes in the SPAC dataset" loading="lazy"/>
+          </figure>
+          <p class="dataset-caption">
+            Class distribution in the face_with_body configuration (excluding the single encounter split). We notice a heavy imbalance in the sample counts across the different classes.
+          </p>
+        </div>
+
+        <div class="dataset-plot-item">
+          <figure class="image dataset-figure">
+            <img src="static/images/datasets/split_counts_spac.png" alt="Bar Chart showing the number of samples per split per config" loading="lazy"/>
+          </figure>
+          <p class="dataset-caption">
+            Sample counts in the four dataset configurations.
+          </p>
+        </div>
+
+        <div class="dataset-plot-item">
+          <figure class="image dataset-figure">
+            <img src="static/images/datasets/temporal_coverage_spac.png" alt="Chart showing the temporal coverage of the SPAC dataset" loading="lazy"/>
+          </figure>
+          <p class="dataset-caption">
+            Temporal coverage of the face_with_body configuration.
+          </p>
+        </div>
+      </div>
+
+      <a href="https://huggingface.co/datasets/gorilla-watch/Gorilla-SPAC-Wild" target="_blank"
+         class="button is-dark is-small mt-5">
+        <span class="icon"><i class="fas fa-database"></i></span>
+        <span>Gorilla-SPAC-Wild on Hugging Face</span>
+      </a>
+    </div>
+
+    <!-- Gorilla-Zoo-Berlin -->
+    <div class="box dataset-card">
+      <h3 class="title is-4 mb-1">Gorilla-Zoo-Berlin</h3>
+      <p class="dataset-subtitle">Cross-domain evaluation benchmark &middot; Zoo Berlin, Germany</p>
+
+      <div class="dataset-stats">
+        <div class="dataset-stat"><span class="value">5</span><span class="label">Individuals</span></div>
+        <div class="dataset-stat"><span class="value">188.7K</span><span class="label">Face Crops</span></div>
+        <div class="dataset-stat"><span class="value">401.8K</span><span class="label">Body Crops</span></div>
+        <div class="dataset-stat"><span class="value">4</span><span class="label">Camera views</span></div>
+        <div class="dataset-stat"><span class="value">3 mo.</span><span class="label">Recording period</span></div>
+      </div>
+
+      <p>
+        The same camera trap setup, moved to a controlled environment: one social group of five gorillas, filmed from
+        four fixed viewpoints over three months, labelled by their caretakers. Artificial structures, glass and
+        unfamiliar camera angles make it a genuine domain shift, which is why the dataset ships as a single test split. 
+        It measures how well models trained on rainforest footage generalize.
+      </p>
+
+      <figure class="image dataset-figure mt-5">
+        <img src="static/images/datasets/zoo_example_1.jpg" data-full="static/images/datasets/Sango_2.jpg" alt="Zoo camera trap frame with face and body bounding boxes, next to the corresponding face and body crops" loading="lazy"/>
+      </figure>
+      <p class="dataset-caption">
+        A zoo sample in the same format. Subjects are frequently small in frame, so face crops are considerably lower
+        in resolution than in close-range wild encounters.
+      </p>
+
+      <details class="dataset-more">
+        <summary>
+          <i class="fas fa-chevron-down"></i>
+          <span class="dataset-more-show">Show 5 more examples</span>
+          <span class="dataset-more-hide">Hide examples</span>
+        </summary>
+        <div class="dataset-gallery">
+          <div class="dataset-gallery-item">
+            <a href="static/images/datasets/Sango_2.jpg">
+              <figure class="image dataset-figure">
+                <img src="static/images/datasets/Sango_2.jpg" alt="Gorilla-Zoo-Berlin example: Sango" loading="lazy"/>
+              </figure>
+            </a>
+            <p class="dataset-thumb-label">Sango &middot; the example shown above</p>
+          </div>
+          <div class="dataset-gallery-item">
+            <a href="static/images/datasets/Djambala.jpg">
+              <figure class="image dataset-figure">
+                <img src="static/images/datasets/Djambala.jpg" alt="Gorilla-Zoo-Berlin example: Djambala" loading="lazy"/>
+              </figure>
+            </a>
+            <p class="dataset-thumb-label">Djambala</p>
+          </div>
+          <div class="dataset-gallery-item">
+            <a href="static/images/datasets/Bibi.jpg">
+              <figure class="image dataset-figure">
+                <img src="static/images/datasets/Bibi.jpg" alt="Gorilla-Zoo-Berlin example: Bibi" loading="lazy"/>
+              </figure>
+            </a>
+            <p class="dataset-thumb-label">Bibi</p>
+          </div>
+          <div class="dataset-gallery-item">
+            <a href="static/images/datasets/Tilla.jpg">
+              <figure class="image dataset-figure">
+                <img src="static/images/datasets/Tilla.jpg" alt="Gorilla-Zoo-Berlin example: Tilla" loading="lazy"/>
+              </figure>
+            </a>
+            <p class="dataset-thumb-label">Tilla</p>
+          </div>
+          <div class="dataset-gallery-item">
+            <a href="static/images/datasets/M'Penzi.jpg">
+              <figure class="image dataset-figure">
+                <img src="static/images/datasets/M'Penzi.jpg" alt="Gorilla-Zoo-Berlin example: M'Penzi" loading="lazy"/>
+              </figure>
+            </a>
+            <p class="dataset-thumb-label">M'Penzi</p>
+          </div>
+          <div class="dataset-gallery-item">
+            <a href="static/images/datasets/Sango.jpg">
+              <figure class="image dataset-figure">
+                <img src="static/images/datasets/Sango.jpg" alt="Gorilla-Zoo-Berlin example: Sango in a second encounter" loading="lazy"/>
+              </figure>
+            </a>
+            <p class="dataset-thumb-label">Sango</p>
+          </div>
+        </div>
+      </details>
+
+      
+      <div class="dataset-plots">
+        <div class="dataset-plot-item">
+          <figure class="image dataset-figure">
+            <img src="static/images/datasets/class_distribution_zoo.png" alt="Bar Chart showing the distribution of classes in the Zoo dataset" loading="lazy"/>
+          </figure>
+          <p class="dataset-caption">
+            Class distribution in the face_with_body configuration. The five individuals here are much more balanced.
+          </p>
+        </div>
+
+        <div class="dataset-plot-item">
+          <figure class="image dataset-figure">
+            <img src="static/images/datasets/config_counts_zoo.png" alt="Bar Chart showing the number of samples per split per config" loading="lazy"/>
+          </figure>
+          <p class="dataset-caption">
+            Sample counts in the four dataset configurations.
+          </p>
+        </div>
+        
+        <div class="dataset-plot-item">
+          <figure class="image dataset-figure">
+            <img src="static/images/datasets/temporal_coverage_zoo.png" alt="Chart showing the temporal coverage of the Zoo dataset" loading="lazy"/>
+          </figure>
+          <p class="dataset-caption">
+            Temporal coverage of the face_with_body configuration.
+          </p>
+        </div>
+        <div class="dataset-plot-item">
+        <figure class="image dataset-figure mt-5">
+          <img src="static/images/datasets/zoo_cameras.jpg" alt="The four camera viewpoints of the Gorilla-Zoo-Berlin dataset" loading="lazy"/>
+        </figure>
+        <p class="dataset-caption">
+          The four fixed viewpoints covering the enclosure.
+        </p>
+        </div>
+      </div>
+      
+      <a href="https://huggingface.co/datasets/gorilla-watch/Gorilla-Zoo-Berlin" target="_blank"
+         class="button is-dark is-small mt-5">
+        <span class="icon"><i class="fas fa-database"></i></span>
+        <span>Gorilla-Zoo-Berlin on Hugging Face</span>
+      </a>
+    </div>
+
+    <!-- Gorilla-SPAC-MoT -->
+    <div class="box dataset-card">
+      <h3 class="title is-4 mb-1">Gorilla-SPAC-MoT</h3>
+      <p class="dataset-subtitle">Multi-object tracking benchmark &middot; Odzala-Kokoua National Park, Republic of Congo</p>
+
+      <div class="dataset-stats">
+        <div class="dataset-stat"><span class="value">25</span><span class="label">Videos</span></div>
+        <div class="dataset-stat"><span class="value">79.2K</span><span class="label">Frames</span></div>
+        <div class="dataset-stat"><span class="value">188.7K</span><span class="label">Boxes</span></div>
+        <div class="dataset-stat"><span class="value">320</span><span class="label">Tracks</span></div>
+        <div class="dataset-stat"><span class="value">16 / 9</span><span class="label">Hard / easy</span></div>
+      </div>
+
+      <p>
+        Densely annotated camera trap videos for the tracking stage of the pipeline, labelled manually frame by frame.
+        Sequences are graded by difficulty: 16 <em>hard</em> videos with frequent multi-individual interaction and heavy
+        occlusion (about four individuals on average) and 9 <em>easy</em> videos with little interaction, split into 13
+        validation and 12 test sequences. Everything follows the standard MOT Challenge layout
+        (<code>seqinfo.ini</code>, <code>gt/gt.txt</code>, <code>img1/</code>), so existing trackers run on it without
+        conversion &mdash; this is the benchmark behind our tracker comparison.
+      </p>
+
+      <a href="https://huggingface.co/datasets/gorilla-watch/Gorilla-SPAC-MoT" target="_blank"
+         class="button is-dark is-small mt-5">
+        <span class="icon"><i class="fas fa-database"></i></span>
+        <span>Gorilla-SPAC-MoT on Hugging Face</span>
+      </a>
+    </div>
+
+    <div class="dataset-note">
+      <p class="mb-0">
+        <strong>Shared format.</strong> The two re-identification datasets come in four configurations:
+        <code>face_with_body</code> (paired face and body crops), <code>body</code> (body crops only), and two
+        <code>full_image_bbox_*</code> variants that keep the original video frame together with the detection boxes.
+        Every sample carries its individual ID, source video, frame number, camera and date. The source videos are
+        released alongside the images, and all three datasets are licensed under CC-BY-4.0.
+      </p>
+    </div>
+
+    <figure class="page-video">
+      <video controls preload="metadata" playsinline>
+        <source src="static/videos/example3.mp4" type="video/mp4">
+        Your browser does not support embedded videos.
+      </video>
+    </figure>
+  </div>
+</section>
+<!-- End Datasets -->
+
 <!-- Pipeline -->
-<section class="section hero is-light">
+<section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
@@ -460,7 +801,7 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
 <!-- End Pipeline -->
 
 <!-- Results -->
-<section class="section hero">
+<section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
@@ -534,7 +875,7 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
 <!-- End Results -->
 
 <!-- Additional Analyses -->
-<section class="section hero is-light">
+<section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
@@ -557,6 +898,13 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
             <p>Full results including the effect of replacing standard Vision Transformers with DINOv2 backbones in video architectures.</p>
           </div>
         </div>
+
+        <figure class="page-video">
+          <video controls preload="metadata" playsinline>
+            <source src="static/videos/example2.mp4" type="video/mp4">
+            Your browser does not support embedded videos.
+          </video>
+        </figure>
       </div>
     </div>
   </div>
@@ -564,7 +912,7 @@ Dante Wasmuht, Magdalena Bermejo Espinet, German Illera Basas, Gerard de Melo">
 <!-- End Additional Analyses -->
 
 <!-- Visual Overview -->
-<section class="section hero">
+<section class="section hero is-light">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Visual Overview</h2>
     <div class="columns is-multiline">

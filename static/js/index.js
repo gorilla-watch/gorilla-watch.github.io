@@ -31,10 +31,80 @@ document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         const dropdown = document.getElementById('moreWorksDropdown');
         const button = document.querySelector('.more-works-btn');
+        if (!dropdown || !button) return;
         dropdown.classList.remove('show');
         button.classList.remove('active');
     }
 });
+
+// Full-size image viewer for dataset figures
+function setupImageViewer() {
+    const viewer = document.getElementById('imageViewer');
+    const viewerImage = document.getElementById('imageViewerImage');
+    const viewerCaption = document.getElementById('imageViewerCaption');
+    const closeButton = viewer ? viewer.querySelector('.image-viewer-close') : null;
+    const figures = document.querySelectorAll('.dataset-card .dataset-figure img');
+
+    if (!viewer || !viewerImage || figures.length === 0) return;
+
+    let lastFocused = null;
+
+    function openViewer(image) {
+        // Prefer the full-resolution original when the page shows a smaller version
+        viewerImage.src = image.dataset.full || image.currentSrc || image.src;
+        viewerImage.alt = image.alt || '';
+        viewerCaption.textContent = image.alt || '';
+        lastFocused = document.activeElement;
+        viewer.classList.add('is-open');
+        viewer.setAttribute('aria-hidden', 'false');
+        document.documentElement.style.overflow = 'hidden';
+        if (closeButton) closeButton.focus();
+    }
+
+    function closeViewer() {
+        if (!viewer.classList.contains('is-open')) return;
+        viewer.classList.remove('is-open');
+        viewer.setAttribute('aria-hidden', 'true');
+        document.documentElement.style.overflow = '';
+        viewerImage.removeAttribute('src');
+        if (lastFocused) lastFocused.focus();
+    }
+
+    figures.forEach(function(image) {
+        const trigger = image.closest('a') || image;
+        image.classList.add('is-zoomable');
+
+        trigger.addEventListener('click', function(event) {
+            // Let modifier-clicks open the file in a new tab as usual
+            if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
+            event.preventDefault();
+            openViewer(image);
+        });
+
+        if (trigger === image) {
+            image.setAttribute('tabindex', '0');
+            image.setAttribute('role', 'button');
+            image.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openViewer(image);
+                }
+            });
+        }
+    });
+
+    viewer.addEventListener('click', function(event) {
+        if (event.target === viewer || event.target.closest('.image-viewer-close')) {
+            closeViewer();
+        }
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') closeViewer();
+    });
+}
+
+document.addEventListener('DOMContentLoaded', setupImageViewer);
 
 // Copy BibTeX to clipboard
 function copyBibTeX() {
