@@ -671,6 +671,82 @@ code {
   margin-top: 0.75rem;
 }
 
+/* Related Papers */
+.related-intro {
+  color: var(--text-secondary);
+  max-width: 46rem;
+  margin: -0.5rem auto 2rem;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.related-card {
+  position: relative;
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  margin-bottom: 0;
+}
+
+.related-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.related-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.1);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  margin-bottom: 0.6rem;
+}
+
+.related-tag-predecessor {
+  color: #b45309;
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.related-title {
+  margin-bottom: 0.5rem !important;
+  line-height: 1.35;
+}
+
+.related-authors {
+  font-size: 0.9rem;
+  color: var(--text-primary) !important;
+  margin-bottom: 0.2rem !important;
+}
+
+.related-venue {
+  font-size: 0.8rem;
+  color: var(--text-light) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem !important;
+}
+
+.related-summary {
+  font-size: 0.92rem;
+  color: var(--text-secondary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 /* Inline example videos spread across the page */
 .page-video {
   margin-top: 2.5rem;
